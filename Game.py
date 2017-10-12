@@ -106,4 +106,3 @@ while continuer_selec:
                 elif event.axis == 1 and event.value < - 0.5:
                     carre_3.deplacer('haut')
                 carre_3.placer()
-print ('pouet')
