@@ -41,8 +41,8 @@ j3 = 'J3.png'
 
 #Images de l'écran de sélections des personnages
 
-Fond_2 = pygame.image.load('Écran de sélection', fond_selec).convert_alpha()
-Toads = pygame.image.load('Écran de sélection', toads).convert_alpha()
+Fond_2 = pygame.image.load(fond_selec).convert_alpha()
+Toads = pygame.image.load(toads).convert_alpha()
 Retour = pygame.image.load(retour).convert_alpha()
 Donkey_Kong = pygame.image.load(donkey_kong).convert_alpha()
 Kirby = pygame.image.load(kirby).convert_alpha()
