@@ -16,7 +16,7 @@ class Curseur:
         self.y = 155
         self.perso = Donkey_Kong
         
-    def ia(self, nb_joysticks):
+    def ia(self):
         perso_alea = randint(0, 11)
         self.perso = personnages[perso_alea]
         
