@@ -12,11 +12,6 @@ from Classes import *
 
 pygame.display.set_caption(titre_fenetre)
 
-#Création des objets grâce aux classes
-carre_1 = Curseur()
-carre_2 = Curseur()
-carre_3 = Curseur()
-
 #Initialisation des joysticks
 nb_joysticks = pygame.joystick.get_count()
 print("Il y a", nb_joysticks, "joystick(s) branché(s)")
@@ -32,6 +27,16 @@ print("Hats :", joystick_2.get_numhats())
 #Vérification des joysticks
 if event.type == pygame.JOYBUTTONDOWN:
 print(event.button)'''''
+
+#Création des objets grâce aux classes
+carre_1 = Curseur()
+carre_2 = Curseur()
+carre_3 = Curseur()
+if nb_joysticks == 0:
+    carre_2.ia()
+    carre_3.ia()
+elif nb_joysticks == 1:
+    carre_3.ia()
 
 while continuer_selec:
     #Affichage de l'écran de sélection
