@@ -62,3 +62,7 @@ Curseur_3 = pygame.image.load(curseur_3).convert_alpha()
 J1 = pygame.image.load(j1).convert_alpha()
 J2 = pygame.image.load(j2).convert_alpha()
 J3 = pygame.image.load(j3).convert_alpha()
+
+#Création de listes
+
+personnages = [Donkey_Kong, Kirby, Link, Mario, Mega_Man, Pacman, Pikachu, Pit, Samus, Shovel_Knight, Sonic, Yoshi]
