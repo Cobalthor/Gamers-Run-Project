@@ -1,3 +1,5 @@
+from random import randint
+
 from Constantes import *
 
 #Classe gérant les curseurs de l'écran de sélection des personnages
@@ -13,7 +15,11 @@ class Curseur:
         self.x = 50
         self.y = 155
         self.perso = Donkey_Kong
-
+        
+    def ia(self, nb_joysticks):
+        perso_alea = randint(0, 11)
+        self.perso = personnages[perso_alea]
+        
     def deplacer(self, direction):
         """Methode permettant de déplacer la cible"""
         #Déplacement vers la droite
