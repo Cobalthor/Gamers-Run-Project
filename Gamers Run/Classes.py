@@ -15,11 +15,11 @@ class Curseur:
         self.x = 50
         self.y = 155
         self.perso = Donkey_Kong
-        
+
     def ia(self):
         perso_alea = randint(0, 11)
         self.perso = personnages[perso_alea]
-        
+
     def deplacer(self, direction):
         """Methode permettant de déplacer la cible"""
         #Déplacement vers la droite
