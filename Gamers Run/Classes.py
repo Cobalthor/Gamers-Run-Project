@@ -17,7 +17,7 @@ class Curseur:
         self.perso = Donkey_Kong
 
     def ia(self):
-        perso_alea = randint(0, 11)
+        perso_alea = randint(1, 11)
         self.perso = personnages[perso_alea]
 
     def deplacer(self, direction):
