@@ -35,6 +35,8 @@ carre_3 = Curseur()
 if nb_joysticks == 0:
     carre_2.ia()
     carre_3.ia()
+    while carre_3.perso == carre_2.perso:
+        carre_3.ia()
 elif nb_joysticks == 1:
     carre_3.ia()
 
