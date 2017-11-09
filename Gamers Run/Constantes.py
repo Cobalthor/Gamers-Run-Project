@@ -3,10 +3,15 @@ import pygame
 pygame.init()
 
 continuer_selec = 1
+continuer = 1
 
 titre_fenetre = 'Gamers Run'
 
 #IMPORTATION DES IMAGES
+
+#Écran de démarrage
+
+fond_1 = 'Écran_titre.jpg'
 
 #Écran de sélection des personnages
 
@@ -38,6 +43,10 @@ j3 = 'J3.png'
 
 
 #CONVERSION DES IMAGES
+
+#Images de l'écran de démarrage
+
+Fond_1 = pygame.image.load(fond_1).convert_alpha()
 
 #Images de l'écran de sélections des personnages
 
