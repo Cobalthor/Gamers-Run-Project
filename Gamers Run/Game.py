@@ -45,6 +45,7 @@ def ecran_selection():
     fenetre = pygame.display.set_mode((500, 500))
     global continuer_selec
     global continuer
+    global principal
     global nb_joysticks
     if nb_joysticks == 0:
         carre_2.ia()
@@ -92,6 +93,7 @@ def ecran_selection():
             if event.type == pygame.QUIT:
                 continuer = 0
                 continuer_selec = 0
+                principal = 0
             elif event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
                 continuer_selec = 0
             #Vérification d'un clic
@@ -132,15 +134,18 @@ def ecran_selection():
                     carre_3.placer()
 
 while continuer:
-    fenetre = pygame.display.set_mode((517, 336))
-    fenetre.blit(Fond_1, (0, 0))
-    pygame.display.flip()
-    continuer_selec = 1
-    for event in pygame.event.get():
-        #Vérification de fermeture de la fenêtre activée ou non
-        if event.type == pygame.QUIT or event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
-            continuer = 0
-        #Vérification d'un clic
-        elif event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_SPACE:
-                ecran_selection()
+    menu_principal.play()
+    while principal:
+        fenetre = pygame.display.set_mode((517, 336))
+        fenetre.blit(Fond_1, (0, 0))
+        pygame.display.flip()
+        continuer_selec = 1
+        for event in pygame.event.get():
+            #Vérification de fermeture de la fenêtre activée ou non
+            if event.type == pygame.QUIT or event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+                continuer = 0
+                principal = 0
+            #Vérification de la barre espace
+            elif event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_SPACE:
+                    ecran_selection()

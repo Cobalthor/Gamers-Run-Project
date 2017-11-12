@@ -4,8 +4,14 @@ pygame.init()
 
 continuer_selec = 1
 continuer = 1
+principal = 1
 
 titre_fenetre = 'Gamers Run'
+
+#IMPORTATION DES SONS
+
+menu_principal = pygame.mixer.Sound("01_Menu.wav")
+selection_musique = pygame.mixer.Sound("02_Selection.wav")
 
 #IMPORTATION DES IMAGES
 
