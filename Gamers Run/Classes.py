@@ -111,3 +111,43 @@ class Curseur:
                 self.perso = Mega_Man
             if self.perso_y == 1:
                 self.perso = Shovel_Knight
+
+class Perso:
+    #Classe définissant les personnages
+    def __init__(self):
+        if self = 'DONKEY_KONG'
+            self.sprite_x = 
+            self.sprite_y = 
+        if self = 'KIRBY'
+            self.sprite_x = 50
+            self.sprite_y = 50
+        if self = 'LINK'
+            self.sprite_x = 
+            self.sprite_y = 
+        if self = 'MARIO'
+            self.sprite_x = 
+            self.sprite_y = 
+        if self = 'MEGA_MAN'
+            self.sprite_x = 
+            self.sprite_y = 
+        if self = 'PACMAN'
+            self.sprite_x = 
+            self.sprite_y = 
+        if self = 'PIKACHU'
+            self.sprite_x = 
+            self.sprite_y = 
+        if self = 'PIT'
+            self.sprite_x = 
+            self.sprite_y = 
+        if self = 'SAMUS'
+            self.sprite_x = 
+            self.sprite_y = 
+        if self = 'SHOVEL_KNIGHT'
+            self.sprite_x = 
+            self.sprite_y = 
+        if self = 'SONIC'
+            self.sprite_x = 
+            self.sprite_y = 
+        if self = 'YOSHI'
+            self.sprite_x = 
+            self.sprite_y = 
