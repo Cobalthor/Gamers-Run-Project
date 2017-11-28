@@ -18,6 +18,7 @@ selection_musique = pygame.mixer.Sound('selection.wav')
 #Écran de démarrage
 
 fond_1 = 'Écran_titre.jpg'
+button_1 = 'Press_Start_Button.png'
 
 #Écran de sélection des personnages
 
@@ -53,6 +54,7 @@ j3 = 'J3.png'
 #Images de l'écran de démarrage
 
 Fond_1 = pygame.image.load(fond_1).convert_alpha()
+Button_1 = pygame.image.load(button_1).convert_alpha()
 
 #Images de l'écran de sélections des personnages
 
