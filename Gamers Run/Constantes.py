@@ -10,8 +10,8 @@ titre_fenetre = 'Gamers Run'
 
 #IMPORTATION DES SONS
 
-menu_principal = pygame.mixer.Sound("01_Menu.wav")
-selection_musique = pygame.mixer.Sound("02_Selection.wav")
+menu_principal = pygame.mixer.Sound('menu.wav')
+selection_musique = pygame.mixer.Sound('selection.wav')
 
 #IMPORTATION DES IMAGES
 
