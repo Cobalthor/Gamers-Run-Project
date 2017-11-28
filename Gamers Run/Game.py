@@ -96,6 +96,8 @@ def ecran_selection():
                 principal = 0
             elif event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
                 continuer_selec = 0
+                selection_musique.stop()
+                menu_principal.play()
             #Vérification d'un clic
             elif event.type == pygame.KEYDOWN:
                 #Déplacement du curseur 1
@@ -148,4 +150,6 @@ while continuer:
             #Vérification de la barre espace
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_SPACE:
+                    menu_principal.stop()
+                    selection_musique.play()
                     ecran_selection()
