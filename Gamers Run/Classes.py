@@ -61,9 +61,13 @@ class Curseur:
                         self.perso_x = 3
                         self.y -= 68
                         self.x = 305
+            elif self.perso_y == 0:
+                self.perso_y -= 1
+                self.y = 0
+                self.x = 0
 
         #Déplacement vers le bas
-        if direction == 'bas' != 7:
+        if direction == 'bas':
             if self.perso_y != 2:
                 if self.perso_y == 0:
                     self.perso_y += 1
