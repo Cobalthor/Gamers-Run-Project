@@ -1,26 +1,34 @@
+#Importation des librairies
 import pygame
 import os
 
+#Initialisation de pygame
 pygame.init()
 
+#Placement de la fenêtre au centre de l'écran
 os.environ['SDL_VIDEO_WINDOW_POS'] = "350,100"
 
+#Ouverture de la fenêtre
 fenetre = pygame.display.set_mode((517, 336))
 
+#Importation des autre fichiers
 from Constantes import *
 from Classes import *
 
+#Insertion du titre de la fenêtre
 pygame.display.set_caption(titre_fenetre)
 
 #Initialisation des joysticks
 nb_joysticks = pygame.joystick.get_count()
 print("Il y a", nb_joysticks, "joystick(s) branché(s)")
+#Vérification du nombre de joysticks branchés
 if nb_joysticks > 0:
     joystick_1 = pygame.joystick.Joystick(0)
     joystick_2 = pygame.joystick.Joystick(1)
     joystick_1.init()
     joystick_2.init()
-'''''print("Axes :", joystick_2.get_numaxes())
+'''''#Informations sur les boutons
+print("Axes :", joystick_2.get_numaxes())
 print("Boutons :", joystick_2.get_numbuttons())
 print("Trackballs :", joystick_2.get_numballs())
 print("Hats :", joystick_2.get_numhats())
@@ -41,12 +49,14 @@ elif nb_joysticks == 1:
     carre_3.ia()
 
 
+# Fonction ouvrant l'écran de sélection des personnages
 def ecran_selection():
     fenetre = pygame.display.set_mode((500, 500))
     global continuer_selec
     global continuer
     global principal
     global nb_joysticks
+    #Vérification du nombre de manettes
     if nb_joysticks == 0:
         carre_2.ia()
         carre_3.ia()
@@ -55,7 +65,7 @@ def ecran_selection():
     elif nb_joysticks == 1:
         carre_3.ia()
     while continuer_selec:
-        #Affichage de l'écran de sélection
+        #Affichage de chaque image de l'écran de sélection
         fenetre.blit(Fond_2, (0, 0))
         fenetre.blit(Toads, (0, 325))
         fenetre.blit(Retour, (0, 0))
@@ -135,6 +145,7 @@ def ecran_selection():
                         carre_3.deplacer('haut')
                     carre_3.placer()
 
+#Démarrage du menu principal
 while continuer:
     menu_principal.play()
     while principal:
